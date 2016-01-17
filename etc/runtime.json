@@ -1,0 +1,9 @@
+// forever/runtime.json
+{
+    "uid": "dashup",
+    "append": true,
+    "sourceDir": "/home/pi/dash",
+    "workingDir": "/home/pi/dash",
+    "script": "index.js",
+    "path": "/var/forever" 
+}
