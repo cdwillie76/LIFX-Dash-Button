@@ -1,4 +1,29 @@
-var dotenv = require('dotenv').config({path: '/home/pi/dash/.env'});
+var fs = require('fs');
+
+// helper function to check is a file exists
+function existsSync(filename) {
+  try {
+    fs.accessSync(filename);
+    return true;
+  } catch(ex) {
+    return false;
+  }
+}
+
+// check two locations for the .env file and if it doesn't
+// exist, exit the process
+var dotenvPath;
+
+if(existsSync('/opt/LIFX-Dash-Button/.env')) {
+  dotenvPath = '/opt/LIFX-Dash-Button/.env';
+} else if (existsSync('./.env')) {
+  dotenbPath = './.env';
+} else {
+  console.log("Can't find a .env file to load");
+  process.exit(1);
+}
+
+var dotenv = require('dotenv').config({path: dotenvPath});
  
 var dash_button = require('node-dash-button');  
 var dash = dash_button(process.env.DASH_MAC_ADDRESS);
