@@ -28,33 +28,33 @@ $ sudo mkdir /var/forever
 ```
 Copy the application to /opt/LIFX-Dash-Button
 
-Copy etc/init.d/LIFX-Dash-Button to /etc/init.d
+Copy etc/init.d/lifx-dash-button to /etc/init.d
 ``` sh
-$ sudo cp /opt/LIFX-Dash-Button/etc/init.d/LIFX-Dash-Button /etc/init.d/LIFX-Dash-Button
+$ sudo cp /opt/LIFX-Dash-Button/etc/init.d/lifx-dash-button /etc/init.d/lifx-dash-button
 ```
 Change the permissions on the script
 ``` sh
-$ sudo chmod +x /etc/init.d/LIFX-Dash-Button
+$ sudo chmod +x /etc/init.d/lifx-dash-button
 ```
 Register the service to run at boot
 ``` sh
-$ sudo update-rc.d LIFX-Dash-Button defaults
+$ sudo update-rc.d lifx-dash-button defaults
 ```
 Start the service
 ``` sh
-$ sudo service LIFX-Dash-Button start
+$ sudo service lifx-dash-button start
 ```
 Check to see if the service is running using forever
 ``` sh
 $ sudo forever list
 ```
-The log file is located at /var/forever/LIFX-Dash-Button.log
+The log file is located at /var/forever/lifx-dash-button.log
 ``` sh
-$ sudo tail -f /var/forever/LIFX-Dash-Button.log
+$ sudo tail -f /var/forever/lifx-dash-button.log
 ```
 * Stop the service
 ``` sh
-$ sudo service LIFX-Dash-Button stop
+$ sudo service lifx-dash-button stop
 ```
 
 #### License

@@ -1,7 +1,7 @@
 // etc/runtime.json - used by the forever program to run
 // the application as a service
 {
-    "uid": "LIFX-Dash-Button",
+    "uid": "lifx-dash-button",
     "append": true,
     "sourceDir": "/opt/LIFX-Dash-Button",
     "workingDir": "/opt/LIFX-Dash-Button",
