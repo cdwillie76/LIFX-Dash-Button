@@ -1,13 +1,13 @@
 {
-  "name": "lifx",
-  "version": "1.0.0",
-  "description": "",
+  "name": "LIFX-Dash-Button",
+  "version": "2.0.0",
+  "description": "This is a update of the original LIFX-Dash-Button to refactor out the the hardcoded values and create the init.d script to run it on Linux as a service",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Steven Tso",
-  "license": "ISC",
+  "author": "Chris Williams",
+  "license": "MIT",
   "dependencies": {
     "lifx-api": "^1.0.1",
     "node-dash-button": "0.2.6",
