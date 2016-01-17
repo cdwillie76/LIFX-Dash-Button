@@ -1,0 +1,20 @@
+#!/bin/sh
+#/etc/init.d/dashup
+
+export PATH=$PATH:/usr/local/bin
+export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
+
+case "$1" in
+start)
+  exec forever start /opt/LIFX-Dash-Button/etc/runtime.json
+  ;;
+stop)
+  exec forever stop LIFX-Dash-Button
+  ;;
+*)
+  echo "Usage: /etc/init.d/lifx-dash-button {start|stop}"
+  exit 1
+  ;;
+esac
+
+exit 0

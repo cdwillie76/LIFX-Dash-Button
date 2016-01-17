@@ -1,9 +1,10 @@
-// forever/runtime.json
+// etc/runtime.json - used by the forever program to run
+// the application as a service
 {
-    "uid": "dashup",
+    "uid": "LIFX-Dash-Button",
     "append": true,
-    "sourceDir": "/home/pi/dash",
-    "workingDir": "/home/pi/dash",
+    "sourceDir": "/opt/LIFX-Dash-Button",
+    "workingDir": "/opt/LIFX-Dash-Button",
     "script": "index.js",
     "path": "/var/forever" 
 }
