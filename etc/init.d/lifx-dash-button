@@ -9,7 +9,7 @@ start)
   exec forever start /opt/LIFX-Dash-Button/etc/runtime.json
   ;;
 stop)
-  exec forever stop LIFX-Dash-Button
+  exec forever stop lifx-dash-button
   ;;
 *)
   echo "Usage: /etc/init.d/lifx-dash-button {start|stop}"
